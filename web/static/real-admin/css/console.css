@@ -1,0 +1,79 @@
+/*灰色提示*/
+.panel-lead{
+      padding: 15px;
+ 
+    background: #e8edf0;
+    border-color: #e8edf0;
+    position: relative;
+}
+/*区块*/
+.row-page{
+    padding: 15px 0px;
+    clear: left;
+    margin-top: 15px;
+}
+/*面板1*/
+  .panel{
+            float: left;
+            width: 19%;
+            text-align: center;
+            margin-left: 1%;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 22px;
+        }
+        .panel_icon { 
+            width: 40%;
+            display: inline-block;
+            padding: 22px 0;
+            background-color: #54ade8;
+            float: left;
+            height: 35px;
+        }
+        .panel_word {
+            background: #e8edf0;
+            width: 60%;
+            display: inline-block;
+            float: right; 
+            color: #000;
+            height: 80px;
+        }
+        .panel_word span {
+            font-size: 25px;
+            display: block;
+            height: 55px;
+            line-height: 55px;
+        }.panel_box a cite {
+            font-size: 16px;
+            display: block;
+            font-style: normal;
+        }
+/*报单面板*/
+   .real-elem-quote {
+                    margin-bottom: 10px;
+                    padding: 15px;
+                    line-height: 22px;
+                    border-left: 5px solid #009688;
+                    border-radius: 0 2px 2px 0;
+                    background-color: #f2f2f2;
+                }
+                
+                .real-elem-quote2 { 
+                    padding: 15px;
+                    line-height: 22px;
+                    border-left: 5px solid #009688;
+                    border-radius: 0 2px 2px 0;
+                    background-color: #f2f2f2;
+                    margin-bottom: 0px;
+                }
+                
+                .real-quote-nm{
+                    margin-bottom: 10px;
+                    padding: 15px;
+                    line-height: 22px; 
+                    border-radius: 0 2px 2px 0;
+                    background-color: #fff;
+                    margin: 0px 40px 10px; 
+                    border: 1px solid #ccc;
+                    border-left: 5px solid #ccc;
+                }

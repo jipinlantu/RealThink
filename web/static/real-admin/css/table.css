@@ -1,0 +1,462 @@
+           
+.real-table {
+    width:100%;
+    background-color:#fff;
+    color:#666
+}
+.real-table tr {
+    transition:all .3s;
+    -webkit-transition:all .3s
+}
+.real-table th {
+    text-align:left;
+    font-weight:400
+}
+.real-table tbody tr:hover, .real-table thead tr, .real-table-click, .real-table-header, .real-table-hover, .real-table-mend, .real-table-patch, .real-table-tool, .real-table-total, .real-table-total tr, .real-table[real-even] tr:nth-child(even) {
+    background-color:#FAFAFA
+}
+.real-table td, .real-table th, .real-table-col-set, .real-table-fixed-r, .real-table-grid-down, .real-table-header, .real-table-page, .real-table-tips-main, .real-table-tool, .real-table-total, .real-table-view, .real-table[real-skin=line], .real-table[real-skin=row] {
+    border-width:1px;
+    border-style:solid;
+    border-color:#eee
+}
+.real-table td, .real-table th {
+    position:relative;
+    padding:9px 15px;
+    min-height:20px;
+    line-height:20px;
+    font-size:14px
+}
+.real-table[real-skin=line] td, .real-table[real-skin=line] th {
+    border-width:0 0 1px
+}
+.real-table[real-skin=row] td, .real-table[real-skin=row] th {
+    border-width:0 1px 0 0
+}
+.real-table[real-skin=nob] td, .real-table[real-skin=nob] th {
+    border:none
+}
+.real-table img {
+       max-width: 61px;
+}
+.real-table[real-size=lg] td, .real-table[real-size=lg] th {
+    padding:15px 30px
+}
+.real-table-view .real-table[real-size=lg] .real-table-cell {
+    height:40px;
+    line-height:40px
+}
+.real-table[real-size=sm] td, .real-table[real-size=sm] th {
+    font-size:12px;
+    padding:5px 10px
+}
+.real-table-view .real-table[real-size=sm] .real-table-cell {
+    height:20px;
+    line-height:20px
+}
+.real-table[real-data] {
+    display:none
+}
+.real-table-box {
+    position:relative;
+    overflow:hidden
+}
+.real-table-view .real-table {
+    position:relative;
+    width:auto;
+    margin:0
+}
+.real-table-view .real-table[real-skin=line] {
+    border-width:0 1px 0 0
+}
+.real-table-view .real-table[real-skin=row] {
+    border-width:0 0 1px
+}
+.real-table-view .real-table td, .real-table-view .real-table th {
+    padding:5px 0;
+    border-top:none;
+    border-left:none
+}
+.real-table-view .real-table th.real-unselect .real-table-cell span {
+    cursor:pointer
+}
+.real-table-view .real-table td {
+    cursor:default
+}
+.real-table-view .real-table td[data-edit=text] {
+    cursor:text
+}
+.real-table-view .real-form-checkbox[real-skin=primary] i {
+    width:18px;
+    height:18px
+}
+.real-table-view .real-form-radio {
+    line-height:0;
+    padding:0
+}
+.real-table-view .real-form-radio>i {
+    margin:0;
+    font-size:20px
+}
+.real-table-init {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    text-align:center;
+    z-index:110
+}
+.real-table-init .real-icon {
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-15px 0 0 -15px;
+    font-size:30px;
+    color:#c2c2c2
+}
+.real-table-header {
+    border-width:0 0 1px;
+    overflow:hidden
+}
+.real-table-header .real-table {
+    margin-bottom:-1px
+}
+.real-table-tool .real-inline[real-event] {
+    position:relative;
+    width:26px;
+    height:26px;
+    padding:5px;
+    line-height:16px;
+    margin-right:10px;
+    text-align:center;
+    color:#333;
+    border:1px solid #ccc;
+    cursor:pointer;
+    -webkit-transition:.5s all;
+    transition:.5s all
+}
+.real-table-tool .real-inline[real-event]:hover {
+    border:1px solid #999
+}
+.real-table-tool-temp {
+    padding-right:120px
+}
+.real-table-tool-self {
+    position:absolute;
+    right:17px;
+    top:10px
+}
+.real-table-tool .real-table-tool-self .real-inline[real-event] {
+    margin:0 0 0 10px
+}
+.real-table-tool-panel {
+    position:absolute;
+    top:29px;
+    left:-1px;
+    padding:5px 0;
+    min-width:150px;
+    min-height:40px;
+    border:1px solid #d2d2d2;
+    text-align:left;
+    overflow-y:auto;
+    background-color:#fff;
+    box-shadow:0 2px 4px rgba(0, 0, 0, .12)
+}
+.real-table-cell, .real-table-tool-panel li {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+.real-table-tool-panel li {
+    padding:0 10px;
+    line-height:30px;
+    -webkit-transition:.5s all;
+    transition:.5s all
+}
+.real-menu li, .real-menu-body-title a:hover, .real-menu-body-title>.real-icon:hover {
+    transition:all .3s
+}
+.real-table-tool-panel li .real-form-checkbox[real-skin=primary] {
+    width:100%;
+    padding-left:28px
+}
+.real-table-tool-panel li:hover {
+    background-color:#F6F6F6
+}
+.real-table-tool-panel li .real-form-checkbox[real-skin=primary] i {
+    position:absolute;
+    left:0;
+    top:0
+}
+.real-table-tool-panel li .real-form-checkbox[real-skin=primary] span {
+    padding:0
+}
+.real-table-tool .real-table-tool-self .real-table-tool-panel {
+    left:auto;
+    right:-1px
+}
+.real-table-col-set {
+    position:absolute;
+    right:0;
+    top:0;
+    width:20px;
+    height:100%;
+    border-width:0 0 0 1px;
+    background-color:#fff
+}
+.real-table-sort {
+    width:10px;
+    height:20px;
+    margin-left:5px;
+    cursor:pointer!important
+}
+.real-table-sort .real-edge {
+    position:absolute;
+    left:5px;
+    border-width:5px
+}
+.real-table-sort .real-table-sort-asc {
+    top:3px;
+    border-top:none;
+    border-bottom-style:solid;
+    border-bottom-color:#b2b2b2
+}
+.real-table-sort .real-table-sort-asc:hover {
+    border-bottom-color:#666
+}
+.real-table-sort .real-table-sort-desc {
+    bottom:5px;
+    border-bottom:none;
+    border-top-style:solid;
+    border-top-color:#b2b2b2
+}
+.real-table-sort .real-table-sort-desc:hover {
+    border-top-color:#666
+}
+.real-table-sort[real-sort=asc] .real-table-sort-asc {
+    border-bottom-color:#000
+}
+.real-table-sort[real-sort=desc] .real-table-sort-desc {
+    border-top-color:#000
+}
+.real-table-cell {
+    height:28px;
+    line-height:28px;
+    padding:0 15px;
+    position:relative;
+    box-sizing:border-box
+}
+.real-table-cell .real-form-checkbox[real-skin=primary] {
+    top:-1px;
+    padding:0
+}
+.real-table-cell .real-table-link {
+    color:#01AAED
+}
+.laytable-cell-checkbox, .laytable-cell-numbers, .laytable-cell-radio, .laytable-cell-space {
+    padding:0;
+    text-align:center
+}
+.real-table-body {
+    position:relative;
+    overflow:auto;
+    margin-right:-1px;
+    margin-bottom:-1px
+}
+.real-table-body .real-none {
+    line-height:26px;
+    padding:30px 15px;
+    text-align:center;
+    color:#999
+}
+.real-table-fixed {
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:101
+}
+.real-table-fixed .real-table-body {
+    overflow:hidden
+}
+.real-table-fixed-l {
+    box-shadow:1px 0 8px rgba(0, 0, 0, .08)
+}
+.real-table-fixed-r {
+    left:auto;
+    right:-1px;
+    border-width:0 0 0 1px;
+    box-shadow:-1px 0 8px rgba(0, 0, 0, .08)
+}
+.real-table-fixed-r .real-table-header {
+    position:relative;
+    overflow:visible
+}
+.real-table-mend {
+    position:absolute;
+    right:-49px;
+    top:0;
+    height:100%;
+    width:50px
+}
+.real-table-tool {
+    position:relative;
+    z-index:890;
+    width:100%;
+    min-height:50px;
+    line-height:30px;
+    padding:10px 15px;
+    border-width:0 0 1px
+}
+.real-table-tool .real-btn-container {
+    margin-bottom:-10px
+}
+.real-table-page, .real-table-total {
+    border-width:1px 0 0;
+    margin-bottom:-1px;
+    overflow:hidden
+}
+.real-table-page {
+    position:relative;
+    width:100%;
+    padding:7px 7px 0;
+    height:41px;
+    font-size:12px;
+    white-space:nowrap
+}
+.real-table-page>div {
+    height:26px
+}
+.real-table-page .real-laypage {
+    margin:0
+}
+.real-table-page .real-laypage a, .real-table-page .real-laypage span {
+    height:26px;
+    line-height:26px;
+    margin-bottom:10px;
+    border:none;
+    background:0 0
+}
+.real-table-page .real-laypage a, .real-table-page .real-laypage span.real-laypage-curr {
+    padding:0 12px
+}
+.real-table-page .real-laypage span {
+    margin-left:0;
+    padding:0
+}
+.real-table-page .real-laypage .real-laypage-prev {
+    margin-left:-7px!important
+}
+.real-table-page .real-laypage .real-laypage-curr .real-laypage-em {
+    left:0;
+    top:0;
+    padding:0
+}
+.real-table-page .real-laypage button, .real-table-page .real-laypage input {
+    height:26px;
+    line-height:26px
+}
+.real-table-page .real-laypage input {
+    width:40px
+}
+.real-table-page .real-laypage button {
+    padding:0 10px
+}
+.real-table-page select {
+    height:18px
+}
+.real-table-patch .real-table-cell {
+    padding:0;
+    width:30px
+}
+.real-table-edit {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    padding:0 14px 1px;
+    border-radius:0;
+    box-shadow:1px 1px 20px rgba(0, 0, 0, .15)
+}
+.real-table-edit:focus {
+    border-color:#5FB878!important
+}
+select.real-table-edit {
+    padding:0 0 0 10px;
+    border-color:#d2d2d2
+}
+.real-table-view .real-form-checkbox, .real-table-view .real-form-radio, .real-table-view .real-form-switch {
+    top:0;
+    margin:0;
+    box-sizing:content-box
+}
+.real-colorpicker-alpha-slider, .real-colorpicker-side-slider, .real-menu, .real-menu *, .real-nav {
+    box-sizing:border-box
+}
+.real-table-view .real-form-checkbox {
+    top:-1px;
+    height:26px;
+    line-height:26px
+}
+.real-table-view .real-form-checkbox i {
+    height:26px
+}
+.real-table-grid .real-table-cell {
+    overflow:visible
+}
+.real-table-grid-down {
+    position:absolute;
+    top:0;
+    right:0;
+    width:26px;
+    height:100%;
+    padding:5px 0;
+    border-width:0 0 0 1px;
+    text-align:center;
+    background-color:#fff;
+    color:#999;
+    cursor:pointer
+}
+.real-table-grid-down .real-icon {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:-8px 0 0 -8px
+}
+.real-table-grid-down:hover {
+    background-color:#fbfbfb
+}
+body .real-table-tips .real-content {
+    background:0 0;
+    padding:0;
+    box-shadow:0 1px 6px rgba(0, 0, 0, .12)
+}
+.real-table-tips-main {
+    margin:-44px 0 0 -1px;
+    max-height:150px;
+    padding:8px 15px;
+    font-size:14px;
+    overflow-y:scroll;
+    background-color:#fff;
+    color:#666
+}
+.real-table-tips-c {
+    position:absolute;
+    right:-3px;
+    top:-13px;
+    width:20px;
+    height:20px;
+    padding:3px;
+    cursor:pointer;
+    background-color:#666;
+    border-radius:50%;
+    color:#fff
+}
+.real-table-tips-c:hover {
+    background-color:#777
+}
+.real-table-tips-c:before {
+    position:relative;
+    right:-2px
+} 

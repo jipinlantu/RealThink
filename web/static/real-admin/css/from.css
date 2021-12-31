@@ -1,0 +1,889 @@
+   
+.real-form-item {
+    margin-bottom: 15px;
+    clear: both;
+    *zoom: 1;
+}
+.real-form-item:after {
+    content: '\20';
+    clear: both;
+    *zoom: 1;
+    display: block;
+    height: 0;
+}
+
+label {
+    cursor: pointer;
+        line-height: 1.6;
+    color: rgba(0,0,0,.85);
+    font: 14px Helvetica Neue,Helvetica,PingFang SC,Tahoma,Arial,sans-serif;
+}
+label {
+    cursor: pointer;
+}
+ 
+label {
+    cursor: default;
+}
+
+.real-form-label {
+    float:left;
+    display:block;
+    padding:9px 15px;
+    width:80px;
+    font-weight:400;
+    line-height:20px;
+    text-align:right
+}
+
+.real-form-label-col {
+    display:block;
+    float:none;
+    padding:9px 0;
+    line-height:20px;
+    text-align:left
+}
+
+
+.real-input-block {
+    margin-left: 110px;
+    min-height: 36px;
+}
+
+
+.real-form-pane .real-form-label {
+    width:110px;
+    padding:8px 15px;
+    height:38px;
+    line-height:20px;
+    border-width:1px;
+    border-style:solid;
+    border-radius:2px 0 0 2px;
+    text-align:center;
+    background-color:#FAFAFA;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    border-color: #eee;
+    box-sizing:border-box;
+}
+.real-form-pane .real-input-inline {
+    margin-left:-1px
+}
+
+.real-form-pane .real-input-block {
+      
+    margin-left:110px;
+    left:-1px
+}
+
+.real-form-pane .real-input-block input{
+    
+     border:1px solid #eee;
+}  
+
+
+
+
+
+
+
+.real-form-textarea .real-form-label {
+ 
+    display:block;
+    padding:9px 15px;
+    width:100%;
+    font-weight:400;
+    line-height:20px;
+    text-align:left
+}
+.real-form-textarea .real-input-block {
+
+    width:100%;
+    max-width: 100%;
+    margin-left: 0px !important;
+    
+}
+
+ 
+
+
+
+
+
+
+
+
+
+input, textarea, select, button {
+    outline:none;
+    border: #eee;
+}
+.real-input, .real-text {
+    border:1px solid #bebebe;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    font-size:14px;
+    color:#333;
+    border-width: 1px;
+    border-style: solid;
+        height: 38px;
+    line-height: 1.3;
+    line-height: 38px\9;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #fff;
+    color: rgba(0,0,0,.85);
+    border-radius: 2px;
+}
+    /*width:200px;*/
+}
+.real-input, .real-text, .real-select {
+    -webkit-transition:0.2s ease-in;
+    transition:0.2s ease-in;
+    transition-property:box-shadow;
+}
+.real-input {
+    transition-property:box-shadow, border-color;
+}
+.real-input::-webkit-input-placeholder, .real-text::-webkit-input-placeholder {
+    color:#a9a9a9;
+}
+.real-input {
+    height:38px;
+    padding:0 8px; 
+}
+input,textarea  ,select  { 
+     width:100%; 
+}
+ 
+input[type="checkbox"] { 
+     float: left;
+}
+.real-checkbox,.real-radio{
+    
+     float: left;
+}
+.real-text {
+    height:80px;
+    padding:4px 8px;
+    line-height:20px;
+}
+.real-input.real-under, .real-text.real-under {
+    border-top:0;
+    border-left:0;
+    border-right:0;
+    border-bottom:1px solid #bebebe;
+    background:transparent;
+}
+.real-input:focus, .real-text:focus, .real-select:hover {
+    border-color:#7a9cd3;
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(122, 156, 211, 0.6);
+}
+.real-input.real-under:focus, .real-text.real-under:focus {
+    border-color:#7a9cd3;
+    -webkit-box-shadow:inset 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow:inset 0 0 0 rgba(0, 0, 0, 0), 0 0 8px rgba(0, 0, 0, 0);
+}   
+.real-input.real-round, .real-text.real-round, .real-button.real-round, .real-select.real-round, .real-table.real-round, .real-tablein.real-round table {
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+.real-input.real-readonly {
+    background:#eee;
+    cursor:not-allowed;
+    color:#a9a9a9;
+}
+.real-input.real-readonly:focus {
+    border-color:#bebebe;
+    box-shadow:inset 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0);
+}
+ 
+ label {
+    cursor:pointer;
+}
+input, textarea, select, button {
+    outline:none;
+}
+.real-input, .real-text {
+    border:1px solid #bebebe;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    font-size:14px;
+    color:#333;
+    /*width:200px;*/
+}
+.real-input, .real-text, .real-select {
+    -webkit-transition:0.2s ease-in;
+    transition:0.2s ease-in;
+    transition-property:box-shadow;
+}
+.real-input {
+    transition-property:box-shadow, border-color;
+}
+.real-input::-webkit-input-placeholder, .real-text::-webkit-input-placeholder {
+    color:#a9a9a9;
+}
+.real-input {
+    height:38px;
+    padding:0 8px; 
+}
+input,textarea  ,select  { 
+     width:100%; 
+}
+ 
+input[type="checkbox"] { 
+     float: left;
+}
+.real-checkbox,.real-radio{
+    
+     float: left;
+}
+.real-text {
+    height:80px;
+    padding:4px 8px;
+    line-height:20px;
+}
+.real-input.real-under, .real-text.real-under {
+    border-top:0;
+    border-left:0;
+    border-right:0;
+    border-bottom:1px solid #bebebe;
+    background:transparent;
+}
+.real-input:focus, .real-text:focus, .real-select:hover {
+    border-color:#7a9cd3;
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(122, 156, 211, 0.6);
+}
+.real-input.real-under:focus, .real-text.real-under:focus {
+    border-color:#7a9cd3;
+    -webkit-box-shadow:inset 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow:inset 0 0 0 rgba(0, 0, 0, 0), 0 0 8px rgba(0, 0, 0, 0);
+}
+ 
+.real-input.real-ful, .real-text.real-ful, .real-button.real-ful, .real-select.real-ful {
+    width:100%;
+}
+.real-input.real-round, .real-text.real-round, .real-button.real-round, .real-select.real-round, .real-table.real-round, .real-tablein.real-round table {
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+.real-input.real-readonly {
+    background:#eee;
+    cursor:not-allowed;
+    color:#a9a9a9;
+}
+.real-input.real-readonly:focus {
+    border-color:#bebebe;
+    box-shadow:inset 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0);
+}
+.real-select {
+    /*width:200px;*/
+    height:38px;
+    border:1px solid #bebebe;
+    padding:0 16px 0 6px;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    border-radius:0;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAEAQMAAABvKif3AAAABlBMVEUAAABAQEBTWDqaAAAAAXRSTlMAQObYZgAAABRJREFUCNdj+MfAUMPAYMHAIMAAABAOAcNSkrYcAAAAAElFTkSuQmCC");
+    background-repeat:no-repeat;
+    background-position:right center;
+    background:#fff;
+}
+.real-select.real-black {
+    background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAEAQMAAABvKif3AAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAABRJREFUCNdj+MfAUMPAYMHAIMAAABAOAcNSkrYcAAAAAElFTkSuQmCC");
+    background:#333;
+    border-color:#333;
+    color:#fff;
+}
+
+/*label*/
+/*inline*/
+/*item label*/
+/* @media screen and (max-width:450px)*/
+
+/*real-button-lit*/
+ .real-file.real-lit {
+    height:38px;
+    min-width:58px;
+}
+.real-button.real-lit, .real-file.real-lit span {
+    height:38px;
+    font-size:12px;
+    padding:0 12px;
+    min-width:58px;
+}
+.real-file.real-lit i, .real-file.real-lit img {
+    position:relative;
+    top:-1px;
+}
+/*****表单控件*****/
+
+/*****单选框*****/
+
+.real-clear {
+	clear: both
+	}
+.real-RadioStyle input {
+	display: none
+	}
+.real-RadioStyle label {
+	border: 1px solid #CCC;
+	color: #666;
+	padding: 2px 10px 2px 5px;
+	line-height: 28px;
+	min-width: 80px;
+	text-align: center;
+	float: left;
+	margin: 2px;
+	border-radius: 4px
+	}
+
+
+ .real-radio {
+    height:20px;
+    line-height:20px;
+    position:relative;
+    font-size:14px;
+    margin-bottom:10px;
+}
+.real-radio:last-child {
+    margin-bottom:0;
+}
+span.real-radio {
+    display:inline-block;
+    margin-bottom:0;
+    margin-right:18px;
+    vertical-align:top;
+}
+.real-radio label span {
+    margin-left:26px;
+    color:#333;
+}
+.real-radio label input[type="radio"] {
+    position:absolute;
+    z-index:-1;
+    width:0;
+    height:0;
+    overflow:hidden;
+    visibility:hidden;
+    opacity:0;
+}
+.real-radio label em {
+    display:block;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    border:1px solid #ddd;
+    background:#fff;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    position:absolute;
+    top:0;
+    left:0;
+    -webkit-transition:0.1s ease-in;
+    transition:0.1s ease-in;
+    -webkit-transition-property:border-color, background;
+    transition-property:border-color, background;
+}
+.real-radio label, .real-radio label span {
+    height:20px;
+    line-height:20px;
+    display:inline-block;
+}
+.real-radio label input[type="radio"]:checked + em {
+    border-color:#696969;
+    background:#696969;
+    background-clip:content-box;
+    padding:4px;
+}
+.real-radio.real-blue label input[type="radio"]:checked + em, .real-radio.real-blue2 label input[type="radio"]:checked + em {
+    border-color:#409eff;
+    background:#409eff;
+    background-clip: content-box;
+}
+.real-radio.real-red label input[type="radio"]:checked + em, .real-radio.real-red2 label input[type="radio"]:checked + em {
+    border-color:#f56c6c;
+    background:#f56c6c;
+    background-clip: content-box;
+}
+.real-radio.real-yellow label input[type="radio"]:checked + em, .real-radio.real-yellow2 label input[type="radio"]:checked + em {
+    border-color:#f4c044;
+    background:#f4c044;
+    background-clip: content-box;
+}
+.real-radio.real-green label input[type="radio"]:checked + em, .real-radio.real-green2 label input[type="radio"]:checked + em {
+    border-color:#5cb85c;
+    background:#5cb85c;
+    background-clip: content-box;
+}
+.real-radio.real-black label input[type="radio"]:checked + em, .real-radio.real-black2 label input[type="radio"]:checked + em {
+    border-color:#222222;
+    background:#222222;
+    background-clip: content-box;
+}
+.real-radio.real-blue2 label input[type="radio"]:checked + em + span {
+    color:#409eff;
+}
+.real-radio.real-red2 label input[type="radio"]:checked + em + span {
+    color:#f56c6c;
+}
+.real-radio.real-yellow2 label input[type="radio"]:checked + em + span {
+    color:#f4c044;
+}
+.real-radio.real-green2 label input[type="radio"]:checked + em + span {
+    color:#5cb85c;
+}
+.real-radio.real-black2 label input[type="radio"]:checked + em + span {
+    color:#222222;
+}
+/*****单选框*****/
+
+/*****复选框*****/
+.real-RadioStyle input:checked + label {
+	background: url(../img/ico_checkon.svg) no-repeat right bottom;
+	border: 1px solid #00a4ff;
+	background-size: 21px 21px;
+	color: #00a4ff
+	}
+.real-RadioStyle input:disabled + label {
+	opacity: 0.7;
+	}
+ .real-checkbox {
+    min-width:20px;
+    height:20px;
+    line-height:20px;
+    position:relative;
+    font-size:14px;
+    margin-bottom:10px;
+}
+.real-checkbox:last-child {
+    margin-bottom:0;
+}
+span.real-checkbox {
+    display:inline-block;
+    margin-bottom:0;
+    margin-right:18px;
+    vertical-align:top;
+}
+span.real-checkbox:last-child {
+    margin-right:0;
+}
+.real-checkbox label span {
+    margin-left:26px;
+    color:#333;
+}
+.real-checkbox label input[type="checkbox"] {
+    position:absolute;
+    z-index:-1;
+    width:0;
+    height:0;
+    overflow:hidden;
+    visibility:hidden;
+    opacity:0;
+}
+.real-checkbox label em {
+    display:block;
+    width:20px;
+    height:20px;
+    border-radius:4px;
+    border:1px solid #ddd;
+    background:#fff;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    position:absolute;
+    top:0;
+    left:0;
+    -webkit-transition:0.1s ease-in;
+    transition:0.1s ease-in;
+    -webkit-transition-property:border-color, background;
+    transition-property:border-color, background;
+}
+.real-checkbox label em:before, .real-checkbox label em:after {
+    content:"";
+    display:block;
+    position:absolute;
+    background:#fff;
+}
+.real-checkbox label em:before {
+    width:6px;
+    height:2px;
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+    top:10px;
+    left:3px;
+}
+.real-checkbox label em:after {
+    width:10px;
+    height:2px;
+    -webkit-transform:rotate(128deg);
+    transform:rotate(128deg);
+    top:8px;
+    left:6px;
+}
+.real-checkbox label, .real-checkbox label span {
+    height:20px;
+    line-height:20px;
+    display:inline-block;
+}
+.real-checkbox label input[type="checkbox"]:checked + em {
+    border-color:#696969;
+    background:#696969;
+}
+.real-checkbox.real-blue label input[type="checkbox"]:checked + em, .real-checkbox.real-blue2 label input[type="checkbox"]:checked + em {
+    border-color:#409eff;
+    background:#409eff;
+}
+.real-checkbox.real-red label input[type="checkbox"]:checked + em, .real-checkbox.real-red2 label input[type="checkbox"]:checked + em {
+    border-color:#f56c6c;
+    background:#f56c6c;
+}
+.real-checkbox.real-yellow label input[type="checkbox"]:checked + em, .real-checkbox.real-yellow2 label input[type="checkbox"]:checked + em {
+    border-color:#f4c044;
+    background:#f4c044;
+}
+.real-checkbox.real-green label input[type="checkbox"]:checked + em, .real-checkbox.real-green2 label input[type="checkbox"]:checked + em {
+    border-color:#5cb85c;
+    background:#5cb85c;
+}
+.real-checkbox.real-black label input[type="checkbox"]:checked + em, .real-checkbox.real-black2 label input[type="checkbox"]:checked + em {
+    border-color:#222222;
+    background:#222222;
+}
+.real-checkbox.real-blue2 label input[type="checkbox"]:checked + em + span {
+    color:#409eff;
+}
+.real-checkbox.real-red2 label input[type="checkbox"]:checked + em + span {
+    color:#f56c6c;
+}
+.real-checkbox.real-yellow2 label input[type="checkbox"]:checked + em + span {
+    color:#f4c044;
+}
+.real-checkbox.real-green2 label input[type="checkbox"]:checked + em + span {
+    color:#5cb85c;
+}
+.real-checkbox.real-black2 label input[type="checkbox"]:checked + em + span {
+    color:#222222;
+}
+/*****复选框*****/
+
+/*****开关*****/
+
+/*默认样式*/
+ .real-switch {
+    position:relative;
+    -webkit-touch-callout:none;
+    cursor:pointer;
+    overflow:hidden;
+    width:42px;
+    height:24px;
+    border:1px solid #dddddd;
+    border-radius:13px;
+    -webkit-appearance:none;
+    -webkit-user-select:none;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    background:#dcdfe6;
+}
+.real-switch:before {
+    content:"";
+    width:22px;
+    height:22px;
+    line-height:24px;
+    text-transform:uppercase;
+    position:absolute;
+    top:0;
+    left:0;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    background:#fff;
+    box-shadow:0 1px 3px rgba(0, 0, 0, 0.4);
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    -webkit-transition:0.2s ease-in;
+    transition:0.2s ease-in;
+    -webkit-transition-property:background, left;
+    transition-property:background, left;
+}
+.real-switch:checked {
+    border-color:#696969;
+    background:#696969;
+    color:#fff;
+}
+.real-switch:checked:before {
+    left:20px;
+}
+.real-switch.real-onoff {
+    width:64px;
+}
+.real-switch.real-onoff:before {
+    content:"OFF";
+    text-indent:27px;
+}
+.real-switch.real-onoff:checked:before {
+    content:"ON";
+    left:40px;
+    text-indent:-28px;
+}
+.real-switch.real-blue:checked {
+    border-color:#409eff;
+    background:#409eff;
+}
+.real-switch.real-red:checked {
+    border-color:#f56c6c;
+    background:#f56c6c;
+}
+.real-switch.real-yellow:checked {
+    border-color:#f4c044;
+    background:#f4c044;
+}
+.real-switch.real-green:checked {
+    border-color:#5cb85c;
+    background:#5cb85c;
+}
+.real-switch.real-black:checked {
+    border-color:#222222;
+    background:#222222;
+}
+/*自定义文字描述*/
+ .real-switch-tip {
+    display:inline-block;
+    height:24px;
+    position:relative;
+    margin-bottom:10px;
+}
+.real-switch-tip:last-child {
+    margin-bottom:0;
+}
+span.real-switch-tip {
+    margin-bottom:0;
+    margin-right:10px;
+    vertical-align:top;
+}
+span.real-switch-tip:last-child {
+    margin-right:0;
+}
+div.real-switch-tip {
+    display:table;
+}
+.real-switch-tip label, .real-switch-tip span {
+    height:24px;
+    display:block;
+}
+.real-switch-tip span {
+    font-size:12px;
+    min-width:24px;
+    text-align:center;
+    line-height:24px;
+    padding-left:28px;
+    padding-right:12px;
+    color:#999;
+    position:relative;
+    z-index:2;
+    overflow-y:hidden;
+}
+.real-switch-tip span + span {
+    display:none;
+}
+.real-switch-tip input[type="checkbox"] {
+    position:absolute;
+    z-index:-1;
+    width:0;
+    height:0;
+    overflow:hidden;
+    visibility:hidden;
+    opacity:0;
+}
+.real-switch-tip label em {
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:15px;
+    border:1px solid #ddd;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:24px;
+    z-index:1;
+}
+.real-switch-tip label em:after {
+    content:"";
+    display:block;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:#fff;
+    box-shadow:0 1px 3px rgba(0, 0, 0, 0.4);
+    position:absolute;
+    top:0;
+    left:0;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.real-switch-tip label input[type="checkbox"]:checked + em {
+    border-color:#696969;
+    background:#696969;
+}
+.real-switch-tip label input[type="checkbox"]:checked + em:after {
+    left:auto;
+    right:0;
+    background:#fff;
+}
+.real-switch-tip label input[type="checkbox"]:checked + em + span, .real-switch-tip label input[type="checkbox"]:checked + em + span + span {
+    padding-left:12px;
+    padding-right:28px;
+    color:#fff;
+}
+.real-switch-tip label input[type="checkbox"]:checked + em + span {
+    display:none;
+}
+.real-switch-tip label input[type="checkbox"]:checked + em + span + span {
+    display:block;
+}
+.real-switch-tip label input[type="checkbox"]:checked + em + span:after {
+    content:"ON";
+}
+.real-switch-tip span, .real-switch-tip label em, .real-switch-tip label em:after {
+    -webkit-transition:0.2s ease-in;
+    transition:0.2s ease-in;
+    -webkit-transition-property:border-color, background;
+    transition-property:border-color, background;
+}
+.real-switch-tip.real-blue label input[type="checkbox"]:checked + em {
+    border-color:#409eff;
+    background:#409eff;
+}
+.real-switch-tip.real-red label input[type="checkbox"]:checked + em {
+    border-color:#f56c6c;
+    background:#f56c6c;
+}
+.real-switch-tip.real-yellow label input[type="checkbox"]:checked + em {
+    border-color:#f4c044;
+    background:#f4c044;
+}
+.real-switch-tip.real-green label input[type="checkbox"]:checked + em {
+    border-color:#5cb85c;
+    background:#5cb85c;
+}
+.real-switch-tip.real-black label input[type="checkbox"]:checked + em {
+    border-color:#222222;
+    background:#222222;
+}
+/*****开关*****/
+
+/*****上传控件*****/
+ .real-file {
+     float: left;
+    display:inline-block;
+    height:36px;
+    position:relative;
+    margin-bottom:10px;
+    cursor:pointer;
+}
+.real-file:last-child {
+    margin-bottom:0;
+}
+span.real-file {
+    margin-bottom:0;
+    margin-right:10px;
+    vertical-align:top;
+}
+span.real-file:last-child {
+    margin-right:0;
+}
+div.real-file {
+    display:table;
+}
+.real-file input[type="file"] {
+    width:100%;
+    height:100%;
+    opacity:0;
+    position:absolute;
+    top:0;
+    left:0;
+    font-size:0;
+    cursor:pointer;
+    z-index:2;
+}
+
+
+.real-file span {
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    display:inline-block;
+    vertical-align:middle;
+    padding:0 15px;
+    height:36px;
+    line-height:36px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    font-size:14px;
+    position:relative;
+    z-index:1;
+}
+/*.real-file i, .real-file img {height:18px; display:inline-block; vertical-align:middle; overflow:hidden; margin-right:6px;}*/
+ .real-file i, .real-file img {
+    height:20px;
+    line-height:20px;
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:6px;
+}
+.real-file i {
+    transform:translateY(-1px);
+}
+.real-file img {
+    transform:translateY(-2px);
+}
+.real-file i {
+    min-width:20px;
+    font-size:20px;
+    background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAjVBMVEUAAAAiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiLrJpnlAAAALnRSTlMA9gOr6PrJEQ3zY9nTvrWkiX1oTz06Mi0mHBft4Z+YlpKFgW5dCN25sHhFV0QkMVMqTAAAAgtJREFUSMftldtyskAQhIeFhQgeOCMQQIjGQ5J+/8f7Z1HUuBbhv0xVvgutmra3Z4pZpD80MrdeMrWbTTQk5gzArP8wkwmGF9+Awrh8+S8/OfIFGGlXXVfZEswiH3c4tjq5SQUxIm1UlO2MOcQKwDy+FeI5F1ZixLJVhxb3lULFbkdG9wArfxjOAryX0RD3seiOxOycJQ+y08o8ztLZ6XPH7cLjFhCQRsBly1u0sbivnha4cNItp0Fb3ETRYuDd0S3O+1Vuh6AGKroKP9wge7qlgfsRVhaY5lzp1P51+Y+r1KlF7frFlRwR0wRiDpIJD7IHjE+axKcB7AWlHOLTRHyOSenIbRVTLQW3dqQDYNJkTOBAtnrikwkAmzwgfKKJKBKkEwKeSjk+0TaGsSGdo0pZApUuvaEs8abXK2BJLfCq3aBIwrIgI+0OvgItxYB2XFJCWVAmWjgQ085mef1NWPNZysL5DwLX7B03wdL8Xirmak8ta6aE4t6hhL7ZWh23Fdd+1XXzV4ax8tW1us4ptiq8Pv9mD8YOojRbX/o9CGURh8uc6yyNAhvM/nKCs0KPlMZGkNu/H03DMPt3p0tiY0iJnpVze6jDXZ05JEK/oLOFCj8U5MyGW/5tTRzX9EopJacoBouCU1goPdN1tMeUp0kmSLeQyJI0H/nP0CwDv9fSAM1/Wr7q+ov+eMI/GuVEnRAec4IAAAAASUVORK5CYII=");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+/* background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAk1BMVEUAAADROyVeAAAAMHRSTlMA9qv6ApcZ8+rmtWMlEg8G2dPIu6SJhGhPPToL7t7Jn5KAfW5dRDEu4cB4HstXNCpvk6ktAAACBElEQVRIx+3U25aiMBAF0AMJKCKCInfvraBtX87/f90QBKc1PTSvs1bvB3ioVakUVIJfmk/XmtQs9xPD5OaI5Kh5mPmAhCIyqBjtKyrwAztkTWy2+/12I1gLbfTyFmplq/RR80tLlVp46CGXJOcZ7rI5yaXsSTmqRe2HjaqyR/zTLCCdKx5cHTKY9RZx8cTtKVPMJuTcxxN/Tk5mhd53Fl8Ch+QBmgNJJ7jE2cNXOF3YOkFzYuvyNyhjdtYeNN6anbgrZFGV3ibv7qHCN6qD+55sHdYsNPZq/mL7x1GK1aDum8EVpJNhgMwhRQ7IkDROGORkkKFEKcgIA0WkKPFKjm0MZI/JV0xIE4OZ5AQb9RUG25MbBGQCnZ+mPnQJGeBN7U63M4wdNKrzN9XLFpoXrlZ8gWareonJtXaCUsHxmCLVzuCajJGR2nL5iiqFq1wrTmbwN6QzfQhMz7yl8PwUcMiND6Qk519D9lzN6Xg8UgH7a4YKpN3sn4/+fb8hyWhpGMuIZHjv0z+e79NfhKwtDulHNW33a0qVIs22z2n1kR4WVCsU7bpLNoQwdhJucz+ahmE2d6cLuTOEYGM5QyfpzurIg0wiG7cU2FEi4Y26U/4wJp5rBishRF1F6VKUukodWAWm62nX2LXMKwk9BbLKy2uBHlrKzf+bYnU/eripZU3x6xt/AO1sSHEnY+LbAAAAAElFTkSuQmCC");*/
+.real-file.real-blue i, .real-file.real-red i, .real-file.real-yellow i, .real-file.real-green i, .real-file.real-black i {
+   
+    background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAjVBMVEUAAAAiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiLrJpnlAAAALnRSTlMA9gOr6PrJEQ3zY9nTvrWkiX1oTz06Mi0mHBft4Z+YlpKFgW5dCN25sHhFV0QkMVMqTAAAAgtJREFUSMftldtyskAQhIeFhQgeOCMQQIjGQ5J+/8f7Z1HUuBbhv0xVvgutmra3Z4pZpD80MrdeMrWbTTQk5gzArP8wkwmGF9+Awrh8+S8/OfIFGGlXXVfZEswiH3c4tjq5SQUxIm1UlO2MOcQKwDy+FeI5F1ZixLJVhxb3lULFbkdG9wArfxjOAryX0RD3seiOxOycJQ+y08o8ztLZ6XPH7cLjFhCQRsBly1u0sbivnha4cNItp0Fb3ETRYuDd0S3O+1Vuh6AGKroKP9wge7qlgfsRVhaY5lzp1P51+Y+r1KlF7frFlRwR0wRiDpIJD7IHjE+axKcB7AWlHOLTRHyOSenIbRVTLQW3dqQDYNJkTOBAtnrikwkAmzwgfKKJKBKkEwKeSjk+0TaGsSGdo0pZApUuvaEs8abXK2BJLfCq3aBIwrIgI+0OvgItxYB2XFJCWVAmWjgQ085mef1NWPNZysL5DwLX7B03wdL8Xirmak8ta6aE4t6hhL7ZWh23Fdd+1XXzV4ax8tW1us4ptiq8Pv9mD8YOojRbX/o9CGURh8uc6yyNAhvM/nKCs0KPlMZGkNu/H03DMPt3p0tiY0iJnpVze6jDXZ05JEK/oLOFCj8U5MyGW/5tTRzX9EopJacoBouCU1goPdN1tMeUp0kmSLeQyJI0H/nP0CwDv9fSAM1/Wr7q+ov+eMI/GuVEnRAec4IAAAAASUVORK5CYII=");
+}
+.real-file i[class^="icon-"], .real-file i[class*=" icon-"], .real-file i[class^="ico-"], .real-file i[class*=" ico-"], .real-file i[class^="ion-"], .real-file i[class*=" ion-"], .real-file i[class^="glyphicon-"], .real-file i[class*=" glyphicon-"], .real-file i[class^="fa-"], .real-file i[class*=" fa-"], .real-file i[class^="ti-"], .real-file i[class*=" ti-"], .real-file i[class^="zmdi-"], .real-file i[class*=" zmdi-"], .real-file i[class^="wi-"], .real-file i[class*=" wi-"] {
+    background-image:none;
+}
+.real-file.real-blue{
+                     background: #268ef9;
+                     color: #fff;
+                     border-radius: 8px;
+                 } 
+.real-file.real-red{
+                     background: #d83c3c;
+                     color: #fff;
+                     border-radius: 8px;
+                 }
+.real-file.real-yellow{
+                     background: #f4c044;
+                     color: #fff;
+                     border-radius: 8px;
+                 }
+.real-file.real-green{
+                     background: #5cb85c;
+                     color: #fff;
+                     border-radius: 8px;
+                 }
+.real-file.real-black{
+                     background: #222222;
+                     color: #fff;
+                     border-radius: 8px;
+                 }
+
+/*****上传控件*****/
+
+/*表单结束*/
