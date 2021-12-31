@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit|ie-comp|ie-stand">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!--static/real-admin-->
+        <!--后台框架-->
+        <link rel="stylesheet" type="text/css" href="static/real-admin/css/admin.css" />
+        <!-- 图标 -->
+        <link rel="stylesheet" type="text/css" href="static/real-admin/css/ico/iconfont.css" />
+        <!--主题-->
+        <link rel="stylesheet" type="text/css" href="static/real-admin/css/skin/default/skin.css" id="skin" />
+		
+    </head>
+ 
+    <body>
+        <header class="navbar-wrapper" id="headerid">
+            <div class="navbar navbar-fixed-top">
+                <div class="container-fluid cl">
+                    <!--下面div跟随左边导航移动大小-->
+                    <div class="left">
+                        <!--窗口大的时候这样展示-->
+                        <div class="logo navbar-logo f-l mr-10 hidden-xs">{{items.site_name}}.pc</div>
+                        <!--窗口小的时候这样展示-->
+                    </div>
+                    <div class="logo navbar-logo-m f-l mr-10 visible-xs">{{items.site_name}}.wap</div>
+                    <div aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</div>
+                    <div class="right" style="height: 50px;"> <a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)" style="    padding: 0px 15px; color: #fff;    font-size: 25px;    font-weight: 600;  line-height: 50px;"><i class="Hui-iconfont Hui-iconfont-fenlei"></i></a> 
+                        
+                        <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
+                            <ul class="cl">
+                                <li>{{items.admingroup}}</li>
+                                <li class="dropDown dropDown_hover">	<a href="#" class="dropDown_A"> {{items.adminname}} <i class="Hui-iconfont">&#xe6d5;</i></a>
+
+                                    <ul class="dropDown-menu menu radius box-shadow">
+                                        <li><a href="javascript:;" onClick="myselfinfo()">个人信息</a>
+
+                                        </li> 
+                                        <li><a href="javascript:;" onClick="checkCookie()">退出</a>
+
+                                        </li>
+                                    </ul>
+                                </li>
+                               
+                                <li id="Hui-skin" class="dropDown right dropDown_hover"> <a href="javascript:;" class="dropDown_A" title="换肤"><i class="Hui-iconfont" style="font-size:18px">&#xe62a;</i></a>
+
+                                    <ul class="dropDown-menu menu radius box-shadow">
+                                        <li><a href="javascript:;" data-val="default" title="默认（黑色）">默认（黑色）</a>  </li>
+                                        <li><a href="javascript:;" data-val="blue" title="蓝色">蓝色</a> </li>
+                                        <li><a href="javascript:;" data-val="red" title="红色">红色</a> </li>
+                                        <li><a href="javascript:;" data-val="green" title="绿色">绿色</a>  </li>
+                                        <li><a href="javascript:;" data-val="yellow" title="黄色">黄色</a>  </li>
+                                        <li><a href="javascript:;" data-val="orange" title="橙色">橙色</a> </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--导航-->
+        <aside class="Hui-aside">
+            <div class="menu_dropdown bk_2" id="menu">
+                <dl v-for="(value, key, index) in items"> <dt><i class="Hui-iconfont">&#xe62e;</i> {{value.title}}
+                    <i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+                    </dt>
+
+                    <dd>
+                        <ul v-if="Object.keys(value.childlist).length == 0">
+                            <!-- -->
+                            <li> <a :data-href="value.name" :data-title="value.title" href="javascript:void(0)">{{value.title}}</a>
+
+                            </li>
+                        </ul>
+                        <ul v-else>
+                            <li v-for="(childlistvalue, childlistkey, childlistindex) in value.childlist"> <a :data-href="childlistvalue.name" :data-title="childlistvalue.title" href="javascript:void(0)">{{childlistvalue.title}}</a>
+
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </aside>
+        <!--标签-->
+        <section class="Hui-article-box">
+            <div id="Hui-tabNav" class="Hui-tabNav hidden-xs">
+                <div class="Hui-tabNav-wp">
+                    <ul id="min_title_list" class="acrossTab cl">
+                        <li class="active">	<span title="控制台" data-href="dashboard.html">控制台</span>
+	<em></em>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="Hui-tabNav-more btn-group">	<a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d4;</i></a>
+	<a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d7;</i></a>
+
+                </div>
+            </div>
+            <div id="iframe_box" class="Hui-article">
+                <div class="show_iframe">
+                    <div style="display:none" class="loading"></div>
+                    <iframe id="iframe-welcome" data-scrolltop="0" scrolling="yes" frameborder="0" src="dashboard.html"></iframe>
+                </div>
+            </div>
+        </section>
+        <!--标签右键-->
+        <div class="contextMenu" id="Huiadminmenu">
+            <ul>
+                <li id="closethis">关闭当前</li>
+                <li id="closeall">关闭全部</li>
+            </ul>
+        </div>
+        <!--_footer 作为公共模版分离出去-->
+        <script type="text/javascript" src="api/baseurl.js"></script>
+        <script type="text/javascript" src="api/api.js"></script>
+        <!--jq-->
+        <script type="text/javascript" src="static/real-admin/js/jquery/1.9.1/jquery.min.js"></script>
+        <!--layer弹窗-->
+        <script type="text/javascript" src="static/real-admin/js/layer/2.4/layer.js"></script>
+        <!--主要js-->
+        <script type="text/javascript" src="static/real-admin/js/admin.js"></script>
+        <!--请在下方写此页面业务相关的脚本-->
+        <!--右键点击插件-->
+        <script type="text/javascript" src="static/real-admin/js/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
+        <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+        <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+        <script type="text/javascript">
+        //退出
+function checkCookie(cname) {
+    setCookie("token", '')
+    //走ajax
+    //  跳转页面
+
+
+    window.location.href = "./login.html";
+}
+
+
+console.log(getCookie("Huiskin"));
+	var hrefStr=$("#skin").attr("href");
+		var hrefRes=hrefStr.substring(0,hrefStr.lastIndexOf('skin/'))+'skin/'+getCookie("Huiskin")+'/skin.css';
+		$(window.frames.document).contents().find("#skin").attr("href",hrefRes);
+var z = [
+
+    {
+        "id": 10,
+        "name": "系统统计",
+        "title": "系统统计",
+        "pzid": "",
+        "spacer": "",
+        "childlist": [{
+                "id": 11,
+                "name": "highcharts图表",
+                "pzid": "",
+                "url": "https://www.highcharts.com.cn/demo/highcharts/line-ajax",
+                "spacer": "",
+                "childlist": [
+
+                ]
+            }
+        ]
+    }
+];
+  
+//表单信息
+var menu = new Vue({
+    el: '#menu',
+    data: {
+        items: z
+    },
+    methods: {
+        post: function() {
+            this.$http.post(baseurl + "/admin/index/index", {}, {
+                emulateJSON: true, //是否跨域
+                headers: {
+                    "token": token
+                }
+            }).then(function(res) {
+                // console.log(res.body.data.menu);return;
+                this.items = res.body.data.menu;
+
+            });
+            /* */
+        }
+    }
+})
+var header = new Vue({
+    el: '#headerid',
+    data: {
+        items: {
+            site_name: "real",
+            adminname: "admin",
+            admingroup: "admingroup",
+            adminid: "adminid"
+        }
+    },
+    methods: {
+        post: function() {
+            this.$http.post(baseurl + "/admin/index/index", {}, {
+                emulateJSON: true, //是否跨域
+                headers: {
+                    "token": token
+                }
+            }).then(function(res) {
+                // console.log(res.body.data.menu);return;
+                this.items.site_name = res.body.data.config.site_name;
+                this.items.adminname = res.body.data.getUserinfo.nickname;
+                this.items.admingroup = res.body.data.getUserinfo.group.name;
+                this.items.adminid = res.body.data.getUserinfo.id;
+
+            });
+            /* */
+        }
+    }
+})
+header.post()
+menu.post()   
+
+/*个人信息*/
+    function myselfinfo() {
+        layer.open({
+            type: 1,
+            area: ['300px', '200px'],
+            fix: false, //不固定
+            maxmin: true,
+            shade: 0.4,
+            title: '查看信息',
+            content: '<div>管理员信息</div>'
+        });
+    }
+        </script>
+    </body>
+
+</html>

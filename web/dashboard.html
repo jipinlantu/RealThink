@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title></title>
+        <!--基本样式-->
+        <link rel="stylesheet" type="text/css" href="/static/real-admin/list/css/table.css" />
+        <link rel="stylesheet" type="text/css" href="/static/real-admin/list/css/button.css" />
+        <link rel="stylesheet" type="text/css" href="/static/real-admin/list/css/from.css" />
+        <link rel="stylesheet" type="text/css" href="/static/real-admin/css/console.css" />
+        <!--图表-->
+        <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+        <link rel="stylesheet" href="/static/chart/css/animsition.min.css" />
+        <link rel="stylesheet" href="/static/chart/css/drop-down.css" />
+        <link rel="stylesheet" href="/static/chart/css/common.css" />
+        <link rel="stylesheet" href="/static/chart/css/system.css" />
+        <!-- 图标 -->
+        <link rel="stylesheet" type="text/css" href="index/css/ico/iconfont.css" />
+        <style>
+        body {
+            background: #f1f4f6;
+            font-size: 13px;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-family:'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 400;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        html, body {
+            min-height: 100%;
+        }
+        .content {
+            min-height: 250px;
+            padding: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .panel-body {
+            padding: 15px;
+            background: #fff;
+        }
+        .search-form .real-form-item {
+            width: 24.9%;
+            float: left;
+            clear: inherit;
+            margin-left: 1%;
+        }
+        .quick-button .real-btn-group .real-btn {
+            border-radius: 5px !important;
+            margin-right: 5px !important;
+        }
+        .tool {
+            float: right;
+        }
+        </style>
+    </head>
+    
+    <body>
+        <div class="content">
+            <div class="panel-lead" style="  "><em>控制台</em>用于展示当前系统中的统计数据、统计报表及重要实时数据</div>
+            <div class="panel-body">
+                <div class="row-page" style="">
+                    <style>
+</style>
+                    <div class="panel col">
+                        <a href="javascript:;" data-url="page/user/allUsers.html">
+                            <div class="panel_icon" style="background-color:#FF5722;"> <i class="Hui-iconfont iconfont icon-dongtaifensishu" style="    font-size: 30px;   color: #fff;">&#xe620;</i>
+                            </div>
+                            <div class="panel_word userAll"> <span>3</span>
+ <cite>新增人数</cite>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="panel col">
+                        <a href="javascript:;" data-url="page/user/allUsers.html">
+                            <div class="panel_icon" style="background-color:#54ade8;"> <i class="Hui-iconfont iconfont icon-dongtaifensishu" style="    font-size: 30px;   color: #fff;">&#xe620;</i>
+                            </div>
+                            <div class="panel_word userAll"> <span>3</span>
+ <cite>新增人数</cite>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="panel col">
+                        <a href="javascript:;" data-url="page/user/allUsers.html">
+                            <div class="panel_icon" style="background-color:#009688;"> <i class="Hui-iconfont iconfont icon-dongtaifensishu" style="    font-size: 30px;   color: #fff;">&#xe620;</i>
+                            </div>
+                            <div class="panel_word userAll"> <span>3</span>
+ <cite>新增人数</cite>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="panel col">
+                        <a href="javascript:;" data-url="page/user/allUsers.html">
+                            <div class="panel_icon" style="background-color:#5FB878;"> <i class="Hui-iconfont iconfont icon-dongtaifensishu" style="    font-size: 30px;   color: #fff;">&#xe620;</i>
+                            </div>
+                            <div class="panel_word userAll"> <span>3</span>
+ <cite>新增人数</cite>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="panel col">
+                        <a href="javascript:;" data-url="page/user/allUsers.html">
+                            <div class="panel_icon" style="background-color:#F7B824;"> <i class="Hui-iconfont iconfont icon-dongtaifensishu" style="    font-size: 30px;   color: #fff;">&#xe620;</i>
+                            </div>
+                            <div class="panel_word userAll"> <span>3</span>
+ <cite>新增人数</cite>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+                <div class="row-page">
+                    <div id="main" style="height:350px; width: 60%; float: left;"></div>
+                    <div id="main2" style="height:350px; width: 35%; float: right;"></div>
+                    <div style="clear: both;"></div>
+                </div>
+                 <div class="row-page">
+                    <div class="sysNotice col" style="width:50%;float:left;">
+                        <blockquote class="real-elem-quote2 title">感谢</blockquote>
+                        <div class="real-quote-nm">
+                            <ul>
+                                <li>ECharts图表样式用的是</li>
+                                <li>js框架：jquery</li>    
+                                <li>样式是:real-css</li>
+                                <li>弹窗:layer</li>
+                                <li>右键菜单:jquery.contextmenu</li>
+                            </ul>
+                        </div>
+                    </div>   
+                    <div class="sysNotice col" style="width:50%;float:left;">
+                        <blockquote class="real-elem-quote2 title">归属</blockquote>
+                        <div class="real-quote-nm">
+                            <table class="real-table">
+                                <tbody>
+                                    <tr>
+                                        <td>当前版本</td>
+                                        <td class="version">1.0.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>开发作者</td>
+                                        <td class="author">王兆镇</td>
+                                    </tr>
+                                    <tr>
+                                        <td>网站首页</td>
+                                        <td class="homePage"><a href="http://www.jmwl51.com">http://www.jmwl51.com</a>
+                                        </td>
+                                    </tr>  
+                                    <tr>
+                                        <td>下载</td>
+                                        <td class="homePage"><a href="http://real-admin.jp893.com/index.zip">http://real-admin.jp893.com/index.zip</a>
+                                        </td>
+                                    </tr>  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+                <div class="row-page">
+                    <div class="sysNotice col">
+                        <blockquote class="real-elem-quote2 title">更新日志</blockquote>
+                        <div class="real-quote-nm">
+                             <h3># 1.0.9_rls （发行版） - 2017-03-01</h3>
+                            <p>* 后期会多加点动画效果的</p>
+                            
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+               
+            </div>
+        </div>
+        </div>
+        </div>
+        <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+        <script src="http://www.jq22.com/jquery/jquery-ui-1.11.0.js"></script>
+        <script src="/static/chart/js/select-widget-min.js"></script>
+        <script src="/static/chart/js/jquery.animsition.min.js"></script>
+        <script src="https://cdn.bootcss.com/echarts/3.5.3/echarts.min.js"></script>
+        <script src="/static/chart/js/common.js"></script>
+        <script>
+        $(document).ready(function () {
+            //初始化切换
+
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'), 'macarons');
+            var myChart2 = echarts.init(document.getElementById('main2'), 'macarons');
+            // 指定图表的配置项和数据
+            var date = ['2016/11/1', '2016/11/2', '2016/11/3', '2016/11/4', '2016/11/5', '2016/11/6', '2016/11/7',
+                    '2016/11/8', '2016/11/9', '2016/11/10',
+    '2016/11/11', '2016/11/12', '2016/11/13', '2016/11/14', '2016/11/15', '2016/11/16', '2016/11/17', '2016/11/18'
+    , '2016/11/19', '2016/11/20', '2016/11/21', '2016/11/22', '2016/11/23', '2016/11/24', '2016/11/25', '2016/11/26',
+                    '2016/11/27'
+    , '2016/11/28', '2016/11/29', '2016/11/30'];
+
+            //随机数据
+
+            function my_data() {
+                var data = [];
+                for (var i = 0; i < 30; i++) {
+                    data.push(Math.round(Math.random() * (500 - 100) + 100));
+                };
+                return data;
+            }
+            //图标1
+            var option = {
+                tooltip: {
+                    trigger: 'axis',
+                    /*formatter: function(data){
+				        	//console.log(data)
+				        	 myChart.setOption({
+						        title : {
+							        text: '会员数量' + data.value,
+							    }
+						    });
+							
+						   return data.name + '</br>' + '新增数：' + data.value + '</br>';
+						}*/
+
+                },
+                title: {
+                    // text: '会员数量：1000',
+                    /*subtext: '昨日新增：',
+				        subtextStyle: {
+							fontSize:14,
+							color : '#ff4a84'
+						}*/
+                },
+
+                toolbox: {
+                    show: true,
+                    feature: {
+                        mark: {
+                            show: true
+                        },
+                        dataView: {
+                            show: true,
+                            readOnly: true
+                        },
+                        magicType: {
+                            show: true,
+                            type: ['line', 'bar']
+                        },
+                        restore: {
+                            show: true
+                        },
+                        saveAsImage: {}
+                    }
+                },
+                calculable: true,
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: date
+                },
+                yAxis: {
+                    type: 'value',
+                    boundaryGap: [0, '100%']
+                },
+                dataZoom: [{
+                        type: 'inside',
+                        start: 84,
+                        end: 100
+        }, {
+                        start: 84,
+                        end: 100,
+                        handleSize: '80%',
+                        handleStyle: {
+                            color: '#fff',
+                            shadowBlur: 3,
+                            shadowColor: 'rgba(0, 0, 0, 0.6)',
+                            shadowOffsetX: 2,
+                            shadowOffsetY: 2
+                        }
+        }],
+                series: [
+                    {
+                        name: '新增数',
+                        type: 'line',
+                        smooth: true,
+                        itemStyle: {
+                            normal: {
+                                color: 'rgb(255, 70, 131)'
+                            }
+                        },
+                        areaStyle: {
+                            normal: {
+                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                        offset: 0,
+                                        color: 'rgb(255, 158, 68)'
+                        }, {
+                                        offset: 1,
+                                        color: 'rgb(255, 70, 131)'
+                        }])
+                            }
+                        },
+                        data: my_data()
+            }
+                ]
+            };
+            //图标2
+            var option2 = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function (data) {
+                        //console.log(data)
+                        myChart.setOption({
+                            title: {
+                                text: '会员数量' + data.value,
+                            }
+                        });
+                        return data.name + '</br>' + '人数：' + data.value + '</br>占比：' + data.percent + '%' + '</br>';
+                    }
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        mark: {
+                            show: true
+                        },
+                        dataView: {
+                            show: true,
+                            readOnly: false
+                        },
+                        restore: {
+                            show: true
+                        },
+                        saveAsImage: {
+                            show: true
+                        }
+                    }
+                },
+                legend: {
+                    orient: 'horizontal', // 'vertical'
+                    icon: 'pie',
+                    // orient: 'vertical',
+                    x: 'right',
+                    y: 'bottom',
+                    selectedMode: true,
+                    data: ['准会员', '普通会员', '高级会员', 'VIP会员', '超级VIP会员']
+                },
+                series: [
+                    {
+                        name: '各级别会员人数',
+                        center: ['50%', '50%'],
+                        type: 'pie',
+                        radius: ['50%', '65%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center',
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: '20',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            normal: {
+                                show: false
+                            }
+                        },
+                        data: [
+                            {
+                                value: 335,
+                                name: '准会员'
+                            },
+                            {
+                                value: 310,
+                                name: '普通会员'
+                            },
+                            {
+                                value: 234,
+                                name: '高级会员'
+                            },
+                            {
+                                value: 135,
+                                name: 'VIP会员'
+                            },
+                            {
+                                value: 1548,
+                                name: '超级VIP会员'
+                            }
+                        ]
+            }
+                ]
+            };
+
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+            myChart2.setOption(option2);
+
+
+        });
+        </script>
+    </body>
+
+</html>

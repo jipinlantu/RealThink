@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>css3大气美观网站用户登录框特效</title>
+
+<link rel="stylesheet" href="./static/real-admin/css/login.css">
+
+</head>
+<body>
+
+<div class="login-wrap" >
+
+	<h2>登录</h2>
+
+	<div class="form" >
+	    <form action=" ">
+	        
+		<input type="text" placeholder="用户名" name="username" id="username"  />
+		<input type="password" placeholder="密码" name="password" id="password"  />
+		<button type="button" id="send"> 登录 </button> 
+	    </form>
+	</div>
+	
+</div>
+<!--jq-->
+
+<script type="text/javascript" src="./static/real-admin/js/jquery/1.9.1/jquery.min.js"></script>
+
+<!--layer弹窗-->
+<script type="text/javascript" src="./static/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="./api/api.js"></script>
+
+<script>
+
+ function setCookie(cname,cvalue,exdays=0){
+    var d = new Date();
+    d.setTime(d.getTime()+(exdays+24*60*60*1000));
+    var expires = "expires="+d.toGMTString();
+	document.cookie = cname+"="+cvalue+"; "+expires;
+}
+
+        $('#send').click(function(){
+         $.ajax({
+             type: "post",
+             url:api.login,
+             data: {adminname:$("#username").val(), adminpassword:$("#password").val()},
+             dataType: "json",
+             success: function(data){
+			 
+                 if(data.code==1){
+                     
+                     setCookie("token",data.data.userinfo.token,data.data.userinfo.expires_in)
+					 
+			 
+					 // return 
+                       window.location.href="./index.html" ;
+                 }else{
+                     
+                       	 top.layer.alert(data.msg,{shade: 0.3,offset:'250px'});
+                 }
+                       
+                        //  $('#resText').empty();   //清空resText里面的所有内容
+                        //  var html = ''; 
+                        //  $.each(data, function(commentIndex, comment){
+                        //       html += '<div class="comment"><h6>' + comment['username']
+                        //                  + ':</h6><p class="para"' + comment['content']
+                        //                  + '</p></div>';
+                        //  });
+                        //  $('#resText').html(html);
+                      }
+         });
+    });
+</script>
+<!--setCookie("token","3fa7f312-77e2-44bf-872b-17b462573136","36000");-->
+</body>
+</html>
