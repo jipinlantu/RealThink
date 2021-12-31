@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title></title>
+        <!--基本样式-->
+        <link rel="stylesheet" type="text/css" href="/static/real-admin/css/table.css" />
+        <link rel="stylesheet" type="text/css" href="/static/real-admin/css/button.css" />
+        <link rel="stylesheet" type="text/css" href="/static/real-admin/css/from.css" />
+        <link rel="stylesheet" type="text/css" href="/static/page/page.css" />
+        <style>
+                body {
+                    background: #f1f4f6;
+                    font-size: 13px;
+                }
+                html, body {
+                    height: 100%;
+                }
+                body {
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    font-family:'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                    font-weight: 400;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                }
+                html, body {
+                    min-height: 100%;
+                }
+                .content {
+                    min-height: 250px;
+                    padding: 15px;
+                    margin-right: auto;
+                    margin-left: auto;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                .panel-body {
+                    padding: 15px;
+                    background: #fff;
+                }
+                .quick-button .real-btn-group .real-btn {
+                    border-radius: 5px !important;
+                    margin-right: 5px !important;
+                }
+                .tool {
+                    float: right;
+                }
+        </style>
+    </head>
+    
+    <body>
+        <div class="content"  id="app">
+            <div class="panel-body">
+                <div class="search-form"></div>
+                <div class="quick-button" style="padding: 15px 0px;">
+                    <div class="real-btn-group" style="float: left;">
+                        <button type="button" class="real-btn real-new-black" onclick="relo()">刷新</button>
+                        <button type="button" class="real-btn real-new-blue" @click="add('增加',add_url)"   >增加</button> 
+                        <!--<button type="button" class="real-btn real-new-green">增加</button>-->
+                        <button type="button" class="real-btn real-new-red"   @click="dels('删除')">删除</button>
+                    </div>
+                    <div class="tool">
+                        <input class="real-input real-round" type="text" placeholder="圆角样式">
+                    </div>
+                </div>
+                <div class="table-page" style="padding: 15px 0px;">
+                    <div class="table-wrapper">
+                        <div class="table-div">
+                            <table class="real-table" real-even="" real-skin="nob">
+                                <thead>
+                                    <tr>
+                                        <th v-for="(value, key, index) in thead"> <div v-if="value.type=='checkbox'"><input type="checkbox"  @click="changeAllChecked()"  style="    width: 20px; padding: 0px;"> <span> {{value.tetle}} </span>  </div>
+ <span v-else> {{value.tetle}} </span> 
+                                        </th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(list_data_value, list_data_key, list_data_index) in list_data">
+                                        <td v-for="(value, key, index) in thead">
+                                            <div v-for="(list_data_valuevalue, list_data_valuekey, list_data_valueindex) in list_data_value" v-if="list_data_valuekey == value.name "> 
+                                                <!--判断类型，对应的不同样式-->
+                                                <div v-if="value.type=='checkbox' ">  <input type="checkbox"  v-model="checkedNames"     :value="list_data_valuevalue" style="    width: 20px; padding: 0px;"> <span  >{{list_data_valuevalue}} </span></div>
+                                                <span v-else-if="value.type=='img' ">   	<img :src = "list_data_valuevalue" class="img"/> </span>
+                                                <span v-else-if="value.type=='hert' ">   <a :href="list_data_valuevalue">{{list_data_valuevalue}}</a> </span>
+                                                <span   v-else-if="value.type=='state' " :class="'state'+list_data_valuevalue">{{value.searchList[list_data_valuevalue]}}</a> </span> 
+                                                <span v-else> {{list_data_valuevalue}} </span> 
+                                                
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="real-btn real-new-red" @click="del(list_data_value.id)">删除</button>
+                                             <button type="button" class="real-btn real-new-green"  @click="edit('编辑',edit_url,list_data_value.id)">编辑</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <pageination :total="model.total" :size="model.size" :page="model.page" :changge="pageFn"></pageination>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!--jq-->
+        <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+        <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+        <script type="text/javascript" src="/static/real-admin/js/jquery/1.9.1/jquery.min.js"></script>
+        <!--layer弹窗-->
+        <script type="text/javascript" src="/static/layer/2.4/layer.js"></script>
+        <script type="text/javascript" src="/static/real-admin/js/list.js"></script>
+        <script type="text/javascript" src="/static/page/page.js"></script>
+        <script type="text/javascript" src="/api/baseurl.js"></script>
+        <script type="text/javascript" src="/api/api.js"></script>
+        
+        <script>
+        
+       
+        
+        var app = new Vue({
+            el: '#app',
+            data: {
+
+                pk: 'id',
+                index_url: baseurl + api.admin_auth_admin_index,
+                add_url: '/auth/admin/add.html',//页面链接
+                edit_url: '/auth/admin/edit.html',//页面链接 
+
+                search: {
+                    fname: '',
+                    lname: '',
+
+
+                },
+                thead: [ 
+                        
+                    {
+                        name: 'id',
+                        tetle: "ID",
+                        type: "checkbox"
+                    },
+                    {
+                        name: 'group.name',
+                        tetle: "分组",
+                    },
+                    {
+                        name: 'username',
+                        tetle: "账户",
+                    },
+                    {
+                        name: 'nickname',
+                        tetle: "昵称",
+                    },
+                    {
+                        name: 'mobile',
+                        tetle: "手机号",
+                    },
+                    {
+                        name: 'avatar',
+                        tetle: "头像",
+                        type: "img"
+                    },  
+
+                ],
+                checked: false,
+                checkedNames: [],
+                model: {
+                    total: 300, //总页数
+                    size: 2, //每页显示条目个数不传默认10
+                    page: 1, //当前页码
+                },
+                list_data: null
+            },
+            watch: {　　
+                checkedNames() {　　　　
+                    if (this.checkedNames.length == this.list_data.length) {　　　　　　
+                        this.checked = true;　　　　
+                    } else {　　　　　　
+                        this.checked = false;　　　　
+                    }　　
+                }
+            },
+            methods: {
+                //页码切换执行方法
+                pageFn(val) {
+                    this.model.page = val;
+                    //  alert(val);
+                    this.post();
+                    console.log(val);
+                },
+                post: function () {
+
+                    var fname = this.search.fname;
+                    //发送 post 请求
+                    var index_url = this.index_url
+
+
+                    this.$http.post(index_url, {
+                        page: this.model.page,
+                        limit: this.model.size,
+                        where: this.search
+                    }, {
+                        emulateJSON: true, //是否跨域
+                        headers: {
+                            "token": token
+                        }
+                    }).then(function (res) {
+                        this.list_data = res.body.data.rows
+                        this.model.total= res.body.data.total //总页数
+                    
+                        console.log(res);
+                    }, function (res) {
+                        console.log(res.status);
+                    }); 
+                },
+                changeAllChecked: function () {
+                    if (this.checked) {
+                        this.checkedNames = [];
+                    } else {
+                        this.list_data.forEach((item) => {
+                            if (this.checkedNames.indexOf(item.id) == -1) {
+                                this.checkedNames.push(item.id)
+                            }
+                        })
+                    }
+                },
+                del: function (e) {
+                    console.log(e);
+                        layer.confirm('您确定要删除吗？', {
+                          btn: ['确定','取消'] //按钮
+                        }, function(){
+                        //   layer.msg('的确很重要', {icon: 1});
+                        
+                                    $.ajax({
+                        		        type : 'post',
+                                        url : baseurl + api.admin_auth_admin_del,//删除接口 
+                                        dataType : 'json',
+                                        data :{ids:e},
+                                        headers:{ 'token':token},
+                                        success : function(data) {
+                                        	if(data.code== 1){
+                                        	      layer.msg(data.msg );
+                                        	      location.reload();
+                                        	      
+                                        	}else if(data.code=='10501'){
+                                        	    layer.msg(data.message );
+                                        	}else{
+                                        	    layer.msg(data.msg);
+                                        	}
+                                        },
+                                        error : function(){
+                                        	
+                                        }
+                                   })   
+                                   
+                        
+                        }, function(){
+                              layer.msg('已取消删除', {icon: 1});
+                        //   layer.msg('也可以这样', {
+                        //     time: 20000, //20s后自动关闭
+                        //     btn: ['明白了', '知道了']
+                        //   });
+                        });
+                    // this.$messagebox.show({
+                    //     'title': 'hello',
+                    //     'describe': 'everyOne'
+                    // }, {
+                    //     cb: function () {
+                    //         alert('点击确认以后的回调')
+                    //     },
+                    //     buttonName: ['关闭', '确定']
+                    // });
+
+                    console.log(e);
+                },
+                dels: function () {
+                        var ids=this.checkedNames;
+                    // console.log(this.checkedNames);
+                        layer.confirm('您确定要删除吗？', {
+                          btn: ['确定','取消'] //按钮
+                        }, function(){
+                        //   layer.msg('的确很重要', {icon: 1});
+                        
+                                    $.ajax({
+                        		        type : 'post',
+                                        url : baseurl + api.admin_auth_admin_del,//删除接口 
+                                        dataType : 'json',
+                                        data :{ids:ids},
+                                        headers:{ 'token':token},
+                                        success : function(data) {
+                                        	if(data.code== 1){
+                                        	      layer.msg(data.msg );
+                                        	      location.reload();
+                                        	      
+                                        	}else if(data.code=='10501'){
+                                        	    layer.msg(data.message );
+                                        	}else{
+                                        	    layer.msg(data.msg);
+                                        	}
+                                        },
+                                        error : function(){
+                                        	
+                                        }
+                                   })   
+                                   
+                        
+                        }, function(){
+                              layer.msg('已取消删除', {icon: 1});
+                        //   layer.msg('也可以这样', {
+                        //     time: 20000, //20s后自动关闭
+                        //     btn: ['明白了', '知道了']
+                        //   });
+                        });
+
+                },
+                onSubmit() {
+                    console.log('submit!');
+                }
+            }
+        })
+         //这是我们预留的分页和搜索用的
+         app.post();
+         
+         
+         
+ $(".table-div").on("click",".img", function() {
+         
+          var src=$(this).attr('src');
+        
+            layer.photos({
+                photos: {
+                    "data": [{
+                            "src": src
+                        } 
+                    ]
+                },
+                anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机
+            });
+        });
+ 
+        </script>
+    </body>
+
+</html>
